@@ -5,9 +5,9 @@
 
 import scrapy
 
-
-class QiubaiproItem(scrapy.Item):
+class PianItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    name=scrapy.Field()
-    text=scrapy.Field()
+    #图片url
+    url=scrapy.Field()
+    #图片目录
+    mulu=scrapy.Field()

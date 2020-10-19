@@ -1,4 +1,4 @@
-# Scrapy settings for qiubaipro project
+# Scrapy settings for pian project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,17 +7,20 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'qiubaipro'
+BOT_NAME = 'pian'
 
-SPIDER_MODULES = ['qiubaipro.spiders']
-NEWSPIDER_MODULE = 'qiubaipro.spiders'
-LOG_LEVEL='ERROR'
+SPIDER_MODULES = ['pian.spiders']
+NEWSPIDER_MODULE = 'pian.spiders'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36 Edg/84.0.522.52'
+#UA伪装
+USER_AGENT = 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36 Edg/86.0.622.38'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
+
+LOG_LEVEL='ERROR'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -45,13 +48,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'qiubaipro.middlewares.QiubaiproSpiderMiddleware': 543,
+#    'pian.middlewares.PianSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'qiubaipro.middlewares.QiubaiproDownloaderMiddleware': 543,
+#    'pian.middlewares.PianDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,9 +66,9 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'qiubaipro.pipelines.QiubaiproPipeline': 300,
-   'qiubaipro.pipelines.QiubaiproPipeline_db': 301,
+   'pian.pipelines.PianImgPipeline': 300,
 }
+IMAGES_STORE='images'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
