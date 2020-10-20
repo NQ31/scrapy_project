@@ -5,9 +5,9 @@ from scrapy.spiders import CrawlSpider, Rule
 
 class ProSpider(CrawlSpider):
     name = 'pro'
-    allowed_domains = ['www.xxx.com']
+    # allowed_domains = ['www.xxx.com']
     start_urls = ['http://www.xxx.com/']
-
+    #链接提取器，将主链接页面提取的链接发起请求，并将请求结果交给parse_item处理
     rules = (
         Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
     )
