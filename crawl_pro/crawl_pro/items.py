@@ -9,4 +9,8 @@ import scrapy
 class CrawlProItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    img_ref=scrapy.Field()
+    img_url=scrapy.Field()
+    img_title=scrapy.Field()
+
+

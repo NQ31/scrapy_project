@@ -50,6 +50,7 @@ class CrawlProSpiderMiddleware:
 
         # Must return only requests (not items).
         for r in start_requests:
+
             yield r
 
     def spider_opened(self, spider):
